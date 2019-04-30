@@ -1,0 +1,6 @@
+usr/local/bin/v8coin-qt usr/bin
+share/pixmaps/v8coin32.xpm usr/share/pixmaps
+share/pixmaps/v8coin16.xpm usr/share/pixmaps
+share/pixmaps/v8coin128.png usr/share/pixmaps
+debian/v8coin-qt.desktop usr/share/applications
+debian/v8coin-qt.protocol usr/share/kde4/services/

@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=V8COIN Core
+Comment=V8COIN P2P Cryptocurrency
+Comment[de]=Verbinde mit dem V8COIN peer-to-peer Netzwerk
+Comment[fr]=V8COIN, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=V8COIN, eşten eşe kriptografik sanal para birimi
+Exec=v8coin-qt %u
+Terminal=false
+Type=Application
+Icon=v8coin128
+MimeType=x-scheme-handler/v8coin;
+Categories=Office;Finance;

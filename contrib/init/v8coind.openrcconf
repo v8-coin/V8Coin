@@ -1,0 +1,33 @@
+# /etc/conf.d/v8coind: config file for /etc/init.d/v8coind
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/v8coincore/v8coin.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/v8coind"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/v8coind.pid"
+
+# Where to write v8coind data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/v8coind"
+
+# User and group to own v8coind process
+#BITCOIND_USER="v8coincore"
+#BITCOIND_GROUP="v8coincore"
+
+# Path to v8coind executable
+#BITCOIND_BIN="/usr/bin/v8coind"
+
+# Nice value to run v8coind under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#BITCOIND_OPTS=""
+
+# The timeout in seconds OpenRC will wait for bitcoind to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+BITCOIND_SIGTERM_TIMEOUT=60

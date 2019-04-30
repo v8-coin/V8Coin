@@ -1,0 +1,22 @@
+[Unit]
+Description=V8COIN's distributed currency daemon
+After=network.target
+
+[Service]
+User=v8coincore
+Group=v8coincore
+
+Type=forking
+PIDFile=/var/lib/v8coind/v8coind.pid
+ExecStart=/usr/bin/v8coind -daemon -pid=/var/lib/v8coind/v8coind.pid \
+-conf=/etc/v8coincore/v8coin.conf -datadir=/var/lib/v8coind -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
