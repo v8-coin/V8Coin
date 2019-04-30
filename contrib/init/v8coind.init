@@ -1,0 +1,67 @@
+#!/bin/bash
+#
+#  v8coind The V8COIN Core server.
+#
+#
+# chkconfig: 345 80 20
+# description: v8coind
+# processname: v8coind
+#
+
+# Source function library.
+. /etc/init.d/functions
+
+# you can override defaults in /etc/sysconfig/v8coind, see below
+if [ -f /etc/sysconfig/v8coind ]; then
+        . /etc/sysconfig/v8coind
+fi
+
+RETVAL=0
+
+prog=v8coind
+# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/v8coind
+lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/v8coind}
+
+# v8coind defaults to /usr/bin/v8coind, override with BITCOIND_BIN
+v8coind=${BITCOIND_BIN-/usr/bin/v8coind}
+
+# v8coind opts default to -disablewallet, override with BITCOIND_OPTS
+v8coind_opts=${BITCOIND_OPTS--disablewallet}
+
+start() {
+    echo -n $"Starting $prog: "
+    daemon $DAEMONOPTS $v8coind $v8coind_opts
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && touch $lockfile
+    return $RETVAL
+}
+
+stop() {
+    echo -n $"Stopping $prog: "
+    killproc $prog
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && rm -f $lockfile
+    return $RETVAL
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status)
+        status $prog
+        ;;
+    restart)
+        stop
+        start
+        ;;
+    *)
+        echo "Usage: service $prog {start|stop|status|restart}"
+        exit 1
+        ;;
+esac

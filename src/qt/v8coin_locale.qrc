@@ -1,0 +1,21 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/v8coin_bg.qm</file>
+        <file alias="de">locale/v8coin_de.qm</file>
+        <file alias="en">locale/v8coin_en.qm</file>
+        <file alias="es">locale/v8coin_es.qm</file>
+        <file alias="fi">locale/v8coin_fi.qm</file>
+        <file alias="fr">locale/v8coin_fr.qm</file>
+        <file alias="it">locale/v8coin_it.qm</file>
+        <file alias="ja">locale/v8coin_ja.qm</file>
+        <file alias="nl">locale/v8coin_nl.qm</file>
+        <file alias="pl">locale/v8coin_pl.qm</file>
+        <file alias="pt">locale/v8coin_pt.qm</file>
+        <file alias="ru">locale/v8coin_ru.qm</file>
+        <file alias="sk">locale/v8coin_sk.qm</file>
+        <file alias="sv">locale/v8coin_sv.qm</file>
+        <file alias="vi">locale/v8coin_vi.qm</file>
+        <file alias="zh_CN">locale/v8coin_zh_CN.qm</file>
+        <file alias="zh_TW">locale/v8coin_zh_TW.qm</file>
+    </qresource>
+</RCC>
