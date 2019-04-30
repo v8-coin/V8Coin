@@ -235,6 +235,8 @@ public:
         // V8COIN BIP44 coin type is '5'
         nExtCoinType = 5;
 
+
+        vSeeds.push_back(CDNSSeedData("136.144.171.201", "136.144.171.201"));
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
 
         fMiningRequiresPeers = true;
